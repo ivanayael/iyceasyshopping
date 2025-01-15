@@ -1,7 +1,1 @@
-{
-  "dependencies": {
-    "@testing-library/react": "^16.1.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
-}
+{"name":"react-three-cart","version":"0.1.0","private":true,"scripts":{"start":"react-scripts start","build":"react-scripts build","test":"react-scripts test","eject":"react-scripts eject"},"dependencies":{"@react-three/drei":"^9.121.1","@react-three/fiber":"^8.17.12","@testing-library/react":"^16.1.0","react":"^18.3.1","react-dom":"^18.3.1","react-scripts":"^3.0.1","three":"^0.172.0","three-mesh-bvh":"^0.8.0"},"devDependencies":{"@babel/plugin-transform-class-properties":"^7.25.9","@babel/plugin-transform-nullish-coalescing-operator":"^7.26.6","@babel/plugin-transform-numeric-separator":"^7.25.9","@babel/plugin-transform-optional-chaining":"^7.25.9","@babel/plugin-transform-private-methods":"^7.25.9","@eslint/config-array":"^0.19.1","@eslint/object-schema":"^2.1.5","eslint":"^9.18.0","glob":"^11.0.1","rimraf":"^6.0.1","svgo":"^3.3.2"}}
