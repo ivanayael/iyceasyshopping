@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.heladera {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  max-width: 900px;
+}
+
+.producto {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+  padding: 5px; /* Reduce el espacio dentro del producto */
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 5px; /* Asegura que la imagen no tenga demasiado espacio alrededor */
+}
+
+label.frio, label.caliente {
+  display: block;
+  padding: 5px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 5px;
+}
+
+label.frio {
+  background-color: #00bfff; /* Azul claro */
+  color: white;
+}
+
+label.caliente {
+  background-color: #ff6347; /* Rojo tomate */
+  color: white;
+}
+
+label.precio {
+  display: block;
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+button.agregar {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #28a745; /* Verde brillante */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+button.agregar:hover {
+  background-color: #218838;
+}
+
+#pedido {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#pedido h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#pedido ul {
+  list-style: none;
+  padding: 0;
+}
+
+#pedido ul li {
+  margin: 5px 0;
+  font-size: 1.1rem;
+}
+
+#total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #007bff;
+}

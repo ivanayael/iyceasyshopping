@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heladera Abierta</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="heladera">
+    <!-- Producto 1 -->
+    <div class="producto">
+      <img src="img/gondola/frostlimedietp.webp" alt="Producto 1">
+      <label class="frio">Frio</label>
+      <label class="precio">$10</label>
+      <button class="agregar" onclick="agregarAlPedido('Frost Lime Cold', 10)">Pedir</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto">
+      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 2">
+      <label class="frio">Frio</label>
+      <label class="precio">$15</label>
+      <button class="agregar" onclick="agregarAlPedido('IYC Squad Hot Coffee', 15)" >Pedir</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="producto">
+      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 3">
+      <label class="caliente">Caliente</label>
+      <label class="precio">$20</label>
+      <button class="agregar" onclick="agregarAlPedido('IYC Squad Cold Coffee', 20)">Pedir</button>
+    </div>
+
+
+  </div>
+
+  <!-- Pedido -->
+   
+  
+  <div id="pedido">
+    <h2>Pedido</h2>
+    <ul id="listaPedido"></ul>
+    <p>Total: $<span id="total">0</span></p>
+  </div>
+
+   
+  <script src="script.js"></script>
+</body>
+</html>
