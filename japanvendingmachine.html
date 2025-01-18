@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Japan Vending Machine</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+ <!-- Aquí se incluirá el header -->
+ <div id="header"></div>
+
+ <script>
+     // Función para cargar el archivo HTML
+     function loadHTML(url, elementId) {
+         fetch(url)
+             .then(response => response.text())
+             .then(data => document.getElementById(elementId).innerHTML = data)
+             .catch(error => console.error('Error al cargar el archivo HTML:', error));
+     }
+
+     // Cargar el header en el div con id="header"
+     loadHTML('header.html', 'header');
+ </script>
+
+  <div class="gondola-vendingmachine">
+    <!-- Producto 1 -->
+    <div class="product">
+      <img src="img/gondola/frostlimedietp.webp" alt="Producto 1">
+      <label class="cold">Frio</label>
+      <label class="price">¥100</label>
+      <button class="add" onclick="addingSale('Frost Lime Cold', 100)">Push</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="product">
+      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 2">
+      <label class="cold">Frio</label>
+      <label class="price">¥150</label>
+      <button class="add" onclick="addingSale('IYC Squad Cold Coffee', 150)">Push</button>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="product">
+      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 3">
+      <label class="hot">Caliente</label>
+      <label class="price">¥200</label>
+      <button class="add" onclick="addingSale('IYC Squad Hot Coffee', 200)">Push</button>
+    </div>
+  </div>
+
+  <!-- Monedas -->
+  <div id="coins">
+    <h2>Insert Coins</h2>
+    <button onclick="insertCoin(100)">¥100</button>
+    <button onclick="insertCoin(200)">¥200</button>
+    <button onclick="insertCoin(300)">¥300</button>
+    <button onclick="insertCoin(400)">¥400</button>
+    <button onclick="insertCoin(500)">¥500</button>
+    <p>Total Amount: ¥<span id="addedAmount">0</span></p>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>
