@@ -194,7 +194,8 @@ main {
     background-color: #218838;
   }
   
-  #sale {
+  /*
+  #pedido {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -202,27 +203,68 @@ main {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
-  #sale h2 {
+  #pedido h2 {
     text-align: center;
     font-size: 1.5rem;
     color: #007bff;
   }
   
-  #sale ul {
+  #pedido ul {
     list-style: none;
     padding: 0;
   }
   
-  #sale ul li {
+  #pedido ul li {
     margin: 5px 0;
     font-size: 1.1rem;
   }
+   */
+
+
+  #pedido {
+    background-color: #f8f9fa; /* Soft light-gray background for a modern look */
+    padding: 24px;
+    border-radius: 12px; /* Slightly increased rounding for smoother corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* More prominent shadow for depth */
+    font-family: 'Arial', sans-serif; /* Clean font */
+    width: 300px; /* Ajusta el ancho del ticket */
+    flex-shrink: 0; /* Evita que el ticket se reduzca */
+  }
+  
+  #pedido h2 {
+    text-align: center;
+    font-size: 1.75rem; /* Larger font size for better emphasis */
+    color: #2c3e50; /* Darker shade for better contrast */
+    margin-bottom: 16px; /* Add space below the heading */
+  }
+  
+  #pedido ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margins for a cleaner look */
+  }
+  
+  #pedido ul li {
+    margin: 8px 0; /* Increased spacing for better separation */
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    color: #495057; /* Neutral dark-gray text for modern styling */
+    display: flex;
+    justify-content: space-between; /* Align item names and prices neatly */
+  }
+  
+  #pedido p {
+    text-align: center; /* Center align the total text */
+    font-size: 1.25rem; /* Increase size slightly for emphasis */
+    color: #007bff; /* Match the heading color */
+    margin-top: 16px; /* Add spacing above the total */
+  }
   
   #total {
-    font-weight: bold;
+    font-weight: bold; /* Highlight the total amount */
+    color: #28a745; /* Use green for a positive, action-oriented tone */
     font-size: 1.3rem;
-    color: #007bff;
   }
+
   
   #coins {
     display: flex;
@@ -244,3 +286,11 @@ main {
     background-color: #218838;
   }
   
+
+  .main-container {
+    display: flex;
+    justify-content: space-between; /* Acomoda los elementos entre los extremos */
+    align-items: flex-start; /* Alinea los elementos al inicio vertical */
+    padding: 20px; /* Agrega espacio alrededor */
+    gap: 20px; /* Espacio entre el contenido y el ticket */
+}

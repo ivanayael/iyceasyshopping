@@ -27,3 +27,23 @@ function updateSale() {
   total = sale.reduce((acc, sale) => acc + sale.price, 0);
   totalSpan.textContent = total;
 }
+
+
+document.getElementById('payButton').addEventListener('click', function () {
+  const total = parseFloat(document.getElementById('total').textContent); // Obtiene el total
+  const paymentAmount = parseFloat(document.getElementById('paymentAmount').value); // Obtiene el monto ingresado
+
+  if (isNaN(paymentAmount) || paymentAmount <= 0) {
+    alert('Por favor, ingrese un monto válido.');
+    return;
+  }
+
+  if (paymentAmount < total) {
+    alert(`El monto ingresado ($${paymentAmount.toFixed(2)}) no cubre el total de $${total.toFixed(2)}.`);
+  } else {
+    alert(`Pago exitoso! Su cambio es $${(paymentAmount - total).toFixed(2)}.`);
+    document.getElementById('sale').innerHTML = ''; // Vacía la lista de pedidos
+    document.getElementById('total').textContent = '0'; // Reinicia el total
+    document.getElementById('paymentAmount').value = ''; // Limpia el campo de monto
+  }
+});

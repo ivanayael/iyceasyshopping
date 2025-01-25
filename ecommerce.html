@@ -23,45 +23,59 @@
      // Cargar el header en el div con id="header"
      loadHTML('header.html', 'header');
  </script>
+
  <main>
-  <div class="gondola-ecommerce">
-    <!-- Producto 1 -->
-    <div class="product">
-      <img src="img/gondola/frostlimedietp.webp" alt="Producto 1">
-      <label class="cold">Frio</label>
-      <label class="price">$10</label>
-      <button class="add" onclick="addingSale('Frost Lime Cold', 10)">Pedir</button>
-    </div>
+  
+  <div class="main-container">
+    <div class="content">
+      <div class="gondola-ecommerce">
+        <!-- Producto 1 -->
+        <div class="product">
+          <img src="img/gondola/frostlimedietp.webp" alt="Producto 1">
+          <label class="cold">Frio</label>
+          <label class="price">$10</label>
+          <button class="add" onclick="addingSale('Frost Lime Cold', 10)">Pedir</button>
+        </div>
 
-    <!-- Producto 2 -->
-    <div class="product">
-      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 2">
-      <label class="cold">Frio</label>
-      <label class="price">$15</label>
-      <button class="add" onclick="addingSale('IYC Squad Cold Coffee', 15)">Pedir</button>
-    </div>
+        <!-- Producto 2 -->
+        <div class="product">
+          <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 2">
+          <label class="cold">Frio</label>
+          <label class="price">$15</label>
+          <button class="add" onclick="addingSale('IYC Squad Cold Coffee', 15)">Pedir</button>
+        </div>
 
-    <!-- Producto 3 -->
-    <div class="product">
-      <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 3">
-      <label class="hot">Caliente</label>
-      <label class="price">$20</label>
-      <button class="add" onclick="addingSale('IYC Squad Hot Coffee', 20)">Pedir</button>
+        <!-- Producto 3 -->
+        <div class="product">
+          <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 3">
+          <label class="hot">Caliente</label>
+          <label class="price">$20</label>
+          <button class="add" onclick="addingSale('IYC Squad Hot Coffee', 20)">Pedir</button>
+        </div>
+      </div>
     </div>
   </div>
-
    <!-- Pedido -->
    
-  <div id="sale">
+   <aside id="pedido">
     <h2>Pedido</h2>
-    <ul></ul>
+    <ul id="sale"></ul>
     <p>Total: $<span id="total">0</span></p>
-  </div>
+     <!-- Campo para ingresar monto a pagar -->
+    <input 
+    type="number" 
+    id="paymentAmount" 
+    placeholder="Ingrese el monto a pagar" 
+    min="0" 
+    step="0.01"
+    class="payment-input"
+    >
 
-   
-</main>
-
- 
+    <!-- Botón de pagar -->
+     <button id="payButton" style="background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Pagar</button>
+    </aside>
+  </main>
+  
   <script src="script.js"></script>
 </body>
 </html>
