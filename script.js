@@ -1,49 +1,35 @@
-let sale = [];
-let total = 0;
+let addedAmount = 0; // Total de dinero ingresado
 
+// Función para insertar monedas
+function insertCoin(amount) {
+  addedAmount += amount;
+  document.getElementById("addedAmount").textContent = addedAmount;
+}
+
+// Función para pedir una bebida
 function addingSale(name, price) {
-  // Agregar el producto al carrito
-  sale.push({ name, price });
-  
-  // Actualizar el carrito en la interfaz
-  updateSale();
-}
+  if (addedAmount >= price) {
+    const change = addedAmount - price;
 
-function updateSale() {
-  const listSale = document.getElementById('sale');
-  const totalSpan = document.getElementById('total');
+    // Mostrar alerta de suministro de bebida
+    alert(
+      `${name}\n\nEnjoy your drink!\n お飲み物をお楽しみください！\nDisfruta tu bebida`
+    );
 
-  // Limpiar la lista del carrito
-  listSale.innerHTML = '';
+    // Mostrar alerta de cambio si hay
+    if (change > 0) {
+      alert(
+        `¥${change}\n\n Here is your change.\n お釣りはこちらです！\nAquí tienes el cambio`
+      );
+    }
 
-  // Recorrer el carrito y agregar los productos a la lista
-  sale.forEach(product => {
-    const li = document.createElement('li');
-    li.textContent = `${product.name} - $${product.price}`;
-    listSale.appendChild(li);
-  });
-
-  // Actualizar el total
-  total = sale.reduce((acc, sale) => acc + sale.price, 0);
-  totalSpan.textContent = total;
-}
-
-
-document.getElementById('payButton').addEventListener('click', function () {
-  const total = parseFloat(document.getElementById('total').textContent); // Obtiene el total
-  const paymentAmount = parseFloat(document.getElementById('paymentAmount').value); // Obtiene el monto ingresado
-
-  if (isNaN(paymentAmount) || paymentAmount <= 0) {
-    alert('Por favor, ingrese un monto válido.');
-    return;
-  }
-
-  if (paymentAmount < total) {
-    alert(`El monto ingresado ($${paymentAmount.toFixed(2)}) no cubre el total de $${total.toFixed(2)}.`);
+    // Reiniciar el monto ingresado
+    addedAmount = 0;
+    document.getElementById("addedAmount").textContent = addedAmount;
   } else {
-    alert(`Pago exitoso! Su cambio es $${(paymentAmount - total).toFixed(2)}.`);
-    document.getElementById('sale').innerHTML = ''; // Vacía la lista de pedidos
-    document.getElementById('total').textContent = '0'; // Reinicia el total
-    document.getElementById('paymentAmount').value = ''; // Limpia el campo de monto
+    // Mostrar alerta de falta de dinero
+    alert(
+      `\n\n Not enough money.\n日本語: お金が足りません！\nFondos insuficientes.`
+    );
   }
-});
+}

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IYC Sapphire</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <!-- Aquí se incluirá el header -->
+    <!-- Aquí se incluirá el header 
     <div id="header"></div>
 
     <script>
@@ -21,15 +22,24 @@
 
         // Cargar el header en el div con id="header"
         loadHTML('header.html', 'header');
-    </script>
+    </script> -->
 
-    <main>
+    <main> 
+       
         <section class="promo">
-            <img src="img/gondola/IYC_Banner_Linkedin.png" alt="IYC Sapphire Banner">
+           <!-- <img src="img/gondola/IYC_Banner_Linkedin.png" alt="IYC Sapphire Banner"> -->
             <h1>¡Lo que necesitas está aquí!</h1>
-            <p>Encuentra miles de productos al mejor precio</p>
+            <p>Elige tu bebida favorita</p>
         </section>
-        
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- Categorias 
         <section class="categories">
 
             <div class="category-item">
@@ -44,7 +54,49 @@
                 <a href="japanvendingmachine.html">Japan Vending Machine</a>
             </div>
 
-        </section>
+        </section> -->
+
+         <!-- Monedas -->
+        <div id="coins">
+            <h2>Insert Coins</h2>
+            <button onclick="insertCoin(100)">¥100</button>
+            <button onclick="insertCoin(200)">¥200</button>
+            <button onclick="insertCoin(300)">¥300</button>
+            <button onclick="insertCoin(400)">¥400</button>
+            <button onclick="insertCoin(500)">¥500</button>
+            <p>Total Amount: ¥<span id="addedAmount">0</span></p>
+        </div>
+
+
+        <div class="gondola-vendingmachine">
+
+            <!-- Producto 1 -->
+            <div class="product">
+              <img src="img/gondola/frostlimedietp.webp" alt="Producto 1">
+              <label class="cold">Cold</label>
+              <label class="price">¥100</label>
+              <button class="add" onclick="addingSale('Frost Lime Cold', 100)">Push</button>
+            </div>
+        
+            <!-- Producto 2 -->
+            <div class="product">
+              <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 2">
+              <label class="hot">Hot</label>
+              <label class="price">¥200</label>
+              <button class="add" onclick="addingSale('IYC Squad Hot Coffee', 150)">Push</button>
+            </div>
+        
+            <!-- Producto 3 -->
+            <div class="product">
+              <img src="img/gondola/iycsquadhotcoffee.webp" alt="Producto 3">
+              <label class="hot">Hot</label>
+              <label class="price">¥200</label>
+              <button class="add" onclick="addingSale('IYC Squad Hot Coffee', 200)">Push</button>
+            </div>
+          </div>
+    
+        
+          <script src="script.js"></script>
     </main>
 
     <footer class="footer">
